@@ -25,7 +25,7 @@ public class Carrier extends AbstractEntity{
 
     @NotNull
     @NotBlank
-    @OneToMany
+    @OneToOne
     private Company company;
 
     @NotNull
