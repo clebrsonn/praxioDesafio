@@ -1,5 +1,8 @@
 package com.praxio.desafio.model;
 
+import lombok.Getter;
+
+@Getter
 public enum Modality {
     Rodoviario("Rodoviário"), Aereo("Aéreo"), Aquaviario("Aquaviário");
 
@@ -9,7 +12,4 @@ public enum Modality {
         this.type = type;
     }
 
-    public String getType() {
-        return type;
-    }
 }

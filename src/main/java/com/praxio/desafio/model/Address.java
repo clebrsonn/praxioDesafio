@@ -2,10 +2,14 @@ package com.praxio.desafio.model;
 
 import lombok.Data;
 
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Data
+@Entity
+@Embeddable
 public class Address {
 
     @NotNull
