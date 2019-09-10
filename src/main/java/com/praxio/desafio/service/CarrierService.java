@@ -3,7 +3,6 @@ package com.praxio.desafio.service;
 import com.praxio.desafio.model.Carrier;
 import com.praxio.desafio.repository.CarrierRepository;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
