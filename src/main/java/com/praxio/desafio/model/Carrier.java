@@ -4,10 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 import java.util.List;
 
 @Data
@@ -17,6 +14,8 @@ public class Carrier extends AbstractEntity{
 
 
     @Email
+    @NotNull
+    @NotBlank
     private String email;
 
     @NotNull
@@ -24,23 +23,23 @@ public class Carrier extends AbstractEntity{
     private String name;
 
     @NotNull
-    @NotBlank
-    @OneToOne
+    //@NotBlank
+    @OneToOne(cascade = CascadeType.ALL)
     private Company company;
 
     @NotNull
-    @NotBlank
-    @Min(1)
+    //@NotBlank
+    @Size(min = 1)
     @OneToMany
     private List<Telephone> telephone;
 
     @NotNull
-    @NotBlank
+    //@NotBlank
     @Enumerated(EnumType.STRING)
     private Modality modality;
 
     @NotNull
-    @NotBlank
+    //@NotBlank
     @Embedded
     private Address address;
 

@@ -1,6 +1,5 @@
 package com.praxio.desafio.model;
 
-import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,6 +14,6 @@ import javax.persistence.MappedSuperclass;
 abstract class AbstractEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 }
