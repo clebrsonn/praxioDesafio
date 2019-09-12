@@ -11,6 +11,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @EqualsAndHashCode(callSuper=false)
 @Getter
@@ -20,7 +21,7 @@ import javax.validation.constraints.NotNull;
 public class Company extends AbstractEntity{
 
 
-    @Min(4)
+    @Size(min = 4)
     @NotBlank
     @NotNull
     private String name;

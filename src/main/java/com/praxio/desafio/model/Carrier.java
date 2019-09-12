@@ -30,7 +30,8 @@ public class Carrier extends AbstractEntity{
     @NotNull
     //@NotBlank
     @Size(min = 1)
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "carrier_id")
     private List<Telephone> telephone;
 
     @NotNull
