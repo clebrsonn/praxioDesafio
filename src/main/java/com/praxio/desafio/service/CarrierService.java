@@ -17,6 +17,10 @@ public class CarrierService {
         this.carrierRepository = carrierRepository;
     }
 
+    public Carrier save(Carrier carrier){
+        return carrierRepository.save(carrier);
+    }
+
 
     public Carrier update(Long id, Carrier carrier) {
         Optional<Carrier> carrierSaved = carrierRepository.findById(id);
